@@ -3,4 +3,4 @@ INSERT INTO burgers
 VALUES
     ("CHUNGUS Burger", FALSE),
     ("Nest Burger", TRUE),
-    ("Beet Kids Vegie Burger", TRUE)
+    ("Beet Kids Veggie Burger", TRUE)
