@@ -1,33 +1,22 @@
 const orm = require("../config/orm.js");
 
 // orm functions go here
-const burger = {};
+const burger = {
+	selectAll: (cb) => {
+		orm.selectAll("burgers", (res) => {
+			cb(res);
+		});
+	},
+	insertOne: (burgerName, cb) => {
+		orm.insertOne("burgers", burgerName, (res) => {
+			cb(res);
+		});
+	},
+	updateOne: (id, cb) => {
+		orm.updateOne("burgers", id, (res) => {
+			cb(res);
+		});
+	}
+};
 
 module.exports = burger;
-
-// const orm = {
-// 	selectAll: () => {
-// 		const query = "SELECT * FROM burgers";
-
-// 		connection.query(query, (err, result) => {
-// 			if (err) throw err;
-// 			console.log(result);
-// 		});
-// 	},
-// 	insertOne: (burgerName) => {
-// 		const query = "INSERT INTO burgers (burger_name) VALUE (?)";
-
-// 		connection.query(query, [burgerName], (err, result) => {
-// 			if (err) throw err;
-// 			console.log(result);
-// 		});
-// 	},
-// 	updateOne: (id) => {
-// 		const query = "UPDATE burgers SET devoured=true WHERE id=?";
-
-// 		connection.query(query, [id], (err, result) => {
-// 			if (err) throw err;
-// 			console.log(result);
-// 		});
-// 	}
-// };

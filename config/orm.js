@@ -1,28 +1,29 @@
 const connection = require("./connection.js");
 
+// orm object key functions
 const orm = {
-	selectAll: () => {
+	selectAll: (cb) => {
 		const query = "SELECT * FROM burgers";
 
 		connection.query(query, (err, result) => {
 			if (err) throw err;
-			console.log(result);
+			cb(result);
 		});
 	},
-	insertOne: (burgerName) => {
+	insertOne: (burgerName, cb) => {
 		const query = "INSERT INTO burgers (burger_name) VALUE (?)";
 
 		connection.query(query, [burgerName], (err, result) => {
 			if (err) throw err;
-			console.log(result);
+			cb(result);
 		});
 	},
-	updateOne: (id) => {
+	updateOne: (id, cb) => {
 		const query = "UPDATE burgers SET devoured=true WHERE id=?";
 
 		connection.query(query, [id], (err, result) => {
 			if (err) throw err;
-			console.log(result);
+			cb(result);
 		});
 	}
 };
