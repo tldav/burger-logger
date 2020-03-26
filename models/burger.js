@@ -3,18 +3,18 @@ const orm = require("../config/orm.js");
 // orm functions go here
 const burger = {
 	all: function(cb) {
-		orm.selectAll("burgers", (res) => {
-			cb(res);
+		orm.selectAll("burgers", (result) => {
+			cb(result);
 		});
 	},
 	create: (burgerName, cb) => {
-		orm.insertOne("burgers", burgerName, (res) => {
-			cb(res);
+		orm.insertOne("burgers", burgerName, (result) => {
+			cb(result);
 		});
 	},
 	update: (id, cb) => {
-		orm.updateOne("burgers", id, (res) => {
-			cb(res);
+		orm.updateOne("burgers", id, (result) => {
+			cb(result);
 		});
 	}
 };
