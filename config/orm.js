@@ -2,11 +2,12 @@ const connection = require("./connection.js");
 
 // orm object key functions
 const orm = {
-	selectAll: (cb) => {
-		const query = "SELECT * FROM burgers";
-
-		connection.query(query, (err, result) => {
-			if (err) throw err;
+	selectAll: function(tableInput, cb) {
+		var queryString = "SELECT * FROM " + tableInput + ";";
+		connection.query(queryString, function(err, result) {
+			if (err) {
+				throw err;
+			}
 			cb(result);
 		});
 	},
@@ -29,3 +30,13 @@ const orm = {
 };
 
 module.exports = orm;
+
+// selectAll: (cb) => {
+//     const query = "SELECT * FROM burgers";
+
+//     connection.query(query, (err, result) => {
+//         if (err) throw err;
+
+//         cb(result);
+//     });
+// },

@@ -1,0 +1,22 @@
+<h2>Eat da Burger</h2>
+
+<h3>Menu</h3>
+
+<ul>
+    {{#each burgers}}
+    {{#unless devoured}}
+    {{ burgers/burger-block devoured=false}}
+    {{/unless}}
+    {{/each}}
+</ul>
+
+
+<h3>Unavailable</h3>
+
+<ul>
+    {{#each burgers}}
+    {{#if devoured}}
+    {{ burgers/burger-block devoured=true}}
+    {{/if}}
+    {{/each}}
+</ul>
