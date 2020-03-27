@@ -20,4 +20,10 @@ router.post("/api/burgers", (req, res) => {
 	});
 });
 
+router.put("/api/burgers/:id", (req, res) => {
+	burger.update(req.params.id, (data) => {
+		console.log(data);
+		res.sendStatus(200);
+	});
+});
 module.exports = router;
