@@ -8,12 +8,12 @@ const burger = {
 		});
 	},
 	create: (burgerName, cb) => {
-		orm.insertOne("burgers", burgerName, (result) => {
+		orm.insertOne(burgerName, (result) => {
 			cb(result);
 		});
 	},
 	update: (id, cb) => {
-		orm.updateOne("burgers", id, (result) => {
+		orm.updateOne(id, (result) => {
 			cb(result);
 		});
 	}

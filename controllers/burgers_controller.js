@@ -13,12 +13,11 @@ router.get("/", (req, res) => {
 	});
 });
 
-// router.post("/api/burgers", (req, res) => {
-// 	burger.create(req.body.name, (data) => {
-// 		console.log(data);
-// 		// res.json({ id: data.insertId });
-// 		res.redirect("/");
-// 	});
-// });
+router.post("/api/burgers", (req, res) => {
+	burger.create(req.body.name, (data) => {
+		console.log(data);
+		res.json({ id: data.insertId });
+	});
+});
 
 module.exports = router;

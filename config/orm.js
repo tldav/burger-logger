@@ -30,13 +30,3 @@ const orm = {
 };
 
 module.exports = orm;
-
-// selectAll: (cb) => {
-//     const query = "SELECT * FROM burgers";
-
-//     connection.query(query, (err, result) => {
-//         if (err) throw err;
-
-//         cb(result);
-//     });
-// },
