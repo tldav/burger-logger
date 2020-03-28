@@ -1,9 +1,24 @@
 $(function() {
 	$(".devour-button").on("click", function(e) {
-		const id = $(this).data("id");
+		let id = $(this).data("id");
 
-		$.ajax("/burgers/" + id, {
+		$.ajax("api/burgers/" + id, {
 			type: "PUT"
+		}).then(() => {
+			location.reload();
+		});
+	});
+
+	$(".create-burger").on("click", function(e) {
+		const newBurger = {
+			name: $("#input-burger")
+				.val()
+				.trim()
+		};
+
+		$.ajax("/burgers/create", {
+			type: "POST",
+			data: newBurger
 		}).then(() => {
 			location.reload();
 		});
