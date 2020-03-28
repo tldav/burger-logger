@@ -1,10 +1,14 @@
 body {
 	background-color: darkred;
+	font-family: "Titan One", cursive;
 }
 
 header {
 	background-color: #f5e050;
 	color: darkred;
+	font-family: "Permanent Marker", cursive;
+	margin-bottom: 50px;
+	padding: 20px;
 }
 
 .img {
@@ -15,10 +19,20 @@ header {
 	max-height: 1000px;
 }
 
+h3 {
+	font-family: "Permanent Marker", cursive;
+	background-color: #f5e050;
+	color: darkred;
+}
+
+#rando-style {
+	padding: 10px;
+	border-radius: 12px;
+}
+
 .list-group-item {
 	background-color: #f5e050;
 	color: darkred;
-	font-weight: bolder;
 }
 
 .list-group-item:hover {
@@ -26,29 +40,26 @@ header {
 	color: darkred;
 }
 
-.devour-button {
+.btn-style {
 	background-color: darkred;
 	border: none;
 	color: #f5e050;
 	border-radius: 12px;
-	font-weight: bolder;
 	padding: 5px;
 	margin: 0;
+	font-family: "Permanent Marker", cursive;
+	box-shadow: 0 14px 17px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
-.devour-button:hover {
+.btn-style:hover {
 	background-color: darkred;
 }
 
-.devour-button:active {
+.btn-style:active {
 	border: none;
 	outline: none;
 }
-.devour-button:focus {
+.btn-style:focus {
 	outline: none;
 	border: none;
-}
-
-.devour-button {
-	box-shadow: 0 14px 17px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }

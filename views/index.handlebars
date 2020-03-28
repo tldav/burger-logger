@@ -10,43 +10,52 @@
 
     <div class="container">
 
-        <h3>Create a Custom Burger</h3>
 
-        <form class="create-form">
+        <div class="row d-flex justify-content-center">
+            <form class="form-inline">
 
-            <div class="form-group">
-                <label for="bn">Burger Name:</label>
-                <input type="text" id="bn" name="name">
-            </div>
+                <div class="form-group">
+                    <div class="col-12 col-md-6">
+                        <label for="bn" id="rando-style">
+                            <h3 id="rando-style">Create a Custom Burger :</h3>
+                        </label>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <input type="text" class="d-inline" id="bn" name="name">
+                    </div>
+                </div>
 
-            <button type="submit">Create Burger</button>
-        </form>
+                <button type="submit" class="btn-style px-3">Create Burger</button>
 
-        <div class="row mt-5">
+            </form>
 
-            <div class="col-md-6">
-                <h3 class="text-center">Menu</h3>
+        </div>
+        <div class="row mt-5 d-flex justify-content-between">
+
+            <div class="col-md-5">
+                <h3 class="text-center mt-5">Menu</h3>
                 <div class="list-group">
                     {{#each burgers}}
                     {{#unless devoured}}
                     <p class="list-group-item list-group-item-action">
-                        {{burger_name}}
-                        <button data-id="{{id}}" class="ml-3 devour-button">
+                        <button data-id="{{id}}" class="ml-1 mr-4 px-3 btn-style devour-button">
                             Devour
                         </button>
+                        {{burger_name}}
+
                     </p>
                     {{/unless}}
                     {{/each}}
                 </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-5 mt-5">
                 <h3 class="text-center">Unavailable</h3>
                 <div class="list-group">
 
                     {{#each burgers}}
                     {{#if devoured}}
-                    <p class="list-group-item list-group-item-action">
+                    <p class="list-group-item list-group-item-action d-flex justify-content-center">
                         {{burger_name}}
                     </p>
                     {{/if}}

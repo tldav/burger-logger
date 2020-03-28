@@ -1,5 +1,5 @@
 $(function() {
-	$(".devour-burger").on("click", function(e) {
+	$(".devour-button").on("click", function(e) {
 		const id = $(this).data("id");
 
 		$.ajax("/burgers/" + id, {
