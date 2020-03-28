@@ -12,7 +12,7 @@ const orm = {
 		});
 	},
 	insertOne: (burgerName, cb) => {
-		const query = "INSERT INTO burgers (burger_name) VALUE (?)";
+		const query = "INSERT INTO burgers (burger_name) VALUES (?)";
 
 		connection.query(query, burgerName, (err, result) => {
 			if (err) throw err;

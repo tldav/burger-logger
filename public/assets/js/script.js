@@ -10,13 +10,14 @@ $(function() {
 	});
 
 	$(".create-burger").on("click", function(e) {
-		const newBurger = {
-			name: $("#input-burger")
+		e.preventDefault();
+		let newBurger = {
+			name: $(".input-burger")
 				.val()
 				.trim()
 		};
 
-		$.ajax("/burgers/create", {
+		$.ajax("/api/burgers", {
 			type: "POST",
 			data: newBurger
 		}).then(() => {
