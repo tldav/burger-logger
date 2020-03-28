@@ -1,60 +1,58 @@
-<div class="container">
-
+<header>
     <div class="row">
         <div class="col-12 d-flex justify-content-center">
-            <h1>Eat da Burger</h1>
+            <h1>Super Street Burger II</h1>
         </div>
     </div>
+</header>
 
-    <div class="row mt-5">
-        <div class="col-md-6">
-            <h3 class="text-center">Menu</h3>
-            <div class="list-group">
+<div class="container img">
 
-                {{#each burgers}}
-                {{#unless devoured}}
-                <p class="list-group-item list-group-item-action">
-                    {{id}}. {{burger_name}}
-                    <button data-id="{{id}}" class="btn btn-warning ml-3 devour-burger">
-                        Devour
-                    </button>
-                </p>
-                {{/unless}}
-                {{/each}}
+    <div class="container">
+
+        <h3>Create a Custom Burger</h3>
+
+        <form class="create-form">
+
+            <div class="form-group">
+                <label for="bn">Burger Name:</label>
+                <input type="text" id="bn" name="name">
             </div>
-        </div>
 
+            <button type="submit">Create Burger</button>
+        </form>
 
+        <div class="row mt-5">
 
-        <div class="col-6 d-flex justify-content-center">
-            <div class="row">
-                <div class="col-12">
-                    <h3>Unavailable</h3>
+            <div class="col-md-6">
+                <h3 class="text-center">Menu</h3>
+                <div class="list-group">
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    <p class="list-group-item list-group-item-action">
+                        {{burger_name}}
+                        <button data-id="{{id}}" class="ml-3 devour-button">
+                            Devour
+                        </button>
+                    </p>
+                    {{/unless}}
+                    {{/each}}
                 </div>
             </div>
 
-            <ul>
-                {{#each burgers}}
-                {{#if devoured}}
-                <li>{{burger_name}}</li>
-                {{/if}}
-                {{/each}}
-            </ul>
+            <div class="col-md-6">
+                <h3 class="text-center">Unavailable</h3>
+                <div class="list-group">
 
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    <p class="list-group-item list-group-item-action">
+                        {{burger_name}}
+                    </p>
+                    {{/if}}
+                    {{/each}}
+                </div>
+            </div>
         </div>
-
     </div>
-
-    <h3>Create a Custom Burger</h3>
-
-    <form class="create-form">
-
-        <div class="form-group">
-            <label for="bn">Burger Name:</label>
-            <input type="text" id="bn" name="name">
-        </div>
-
-        <button type="submit">Create Burger</button>
-    </form>
-
 </div>

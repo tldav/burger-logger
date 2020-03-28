@@ -1,0 +1,54 @@
+body {
+	background-color: darkred;
+}
+
+header {
+	background-color: #f5e050;
+	color: darkred;
+}
+
+.img {
+	background-image: url("/assets/img/super-burger-fighter.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	min-height: 900px;
+	max-height: 1000px;
+}
+
+.list-group-item {
+	background-color: #f5e050;
+	color: darkred;
+	font-weight: bolder;
+}
+
+.list-group-item:hover {
+	background-color: #f5e050;
+	color: darkred;
+}
+
+.devour-button {
+	background-color: darkred;
+	border: none;
+	color: #f5e050;
+	border-radius: 12px;
+	font-weight: bolder;
+	padding: 5px;
+	margin: 0;
+}
+
+.devour-button:hover {
+	background-color: darkred;
+}
+
+.devour-button:active {
+	border: none;
+	outline: none;
+}
+.devour-button:focus {
+	outline: none;
+	border: none;
+}
+
+.devour-button {
+	box-shadow: 0 14px 17px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
